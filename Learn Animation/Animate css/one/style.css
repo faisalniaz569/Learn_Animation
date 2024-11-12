@@ -1,0 +1,21 @@
+.green {
+    height: 100px;
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: green;
+    color: white;
+    overflow: hidden !important;
+}
+
+.red {
+    height: 100px;
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: red;
+    color: white;
+    overflow: hidden !important;
+}
+
+.animate__slideInLeft, .animate__slideInRight {
+    overflow: hidden !important;
+}

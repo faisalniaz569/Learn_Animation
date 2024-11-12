@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #262626;
+}
+
+.stroke {
+    width: 400px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.stroke::before {
+    content: '';
+    top: 0;
+    background-color: #262626;
+}
+
+.stroke::after {
+    content: '\f303';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    top: -50px;
+    background-color: transparent;
+    color: #a9ff08;
+    font-size: 50px;
+    transform: translateX(2px);
+}
+
+.stroke::before, .stroke::after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: pencilstroke 5s linear infinite;
+    animation-timing-function: cubic-bezier(.75, .04, 0, .85);
+}
+
+@keyframes pencilstroke {
+
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 100%;
+    }
+
+    100% {
+        left: 0;
+    }
+
+}

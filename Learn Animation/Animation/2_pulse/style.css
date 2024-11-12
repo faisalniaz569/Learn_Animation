@@ -1,0 +1,65 @@
+.restaurentplay {
+    position: relative;
+}
+
+a.playbtn {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    background-color: bisque;
+    color: indianred;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 16px;
+}
+
+.pulse::before, .pulse::after {
+    content: '';
+    position: absolute;
+    display: block;
+    border: 50%;
+    border: 1px solid bisque;
+    border-radius: 50%;
+    left: -20px;
+    right: -20px;
+    top: -20px;
+    bottom: -20px;
+    animation: pulse 1.5s linear infinite;
+    opacity: 0;
+    backface-visibility: hidden;
+    z-index: 3;
+}
+
+
+/* Pulse animation */
+@keyframes pulse {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

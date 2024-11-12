@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0058a5;
+}
+
+.tennisball {
+    position: relative;
+}
+
+.center, .ball, .shadow, .ball::before, .ball::after {
+    position: absolute;
+}
+
+.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ball {
+    width: 150px;
+    height: 150px;
+    background-color: #c9f364;
+    border-radius: 50%;
+    overflow: hidden;
+    top: 300px;
+    transform: translate(-50%, -50%);
+    animation: ball 1.5s linear infinite;
+}
+
+.ball::before {
+    left: -65%;    
+    box-sizing: border-box;
+    filter: blur(1px);
+}
+
+.ball::after {
+    right: -65%;
+    box-sizing: border-box;
+    filter: blur(1px);
+}
+
+.ball::before, .ball::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+@keyframes ball {
+    
+    0% {
+        transform: translate(-50%, -50%) translateY(-200px) rotate(0deg);
+    }
+    
+    50% {
+        transform: translate(-50%, -50%) translateY(0px) rotate(180deg);
+    }
+    
+    100% {
+        transform: translate(-50%, -50%) translateY(-200px) rotate(360deg);
+    }
+    
+}
+
+
+.shadow {
+    width: 150px;
+    height: 50px;
+    transform: translate(-50%, 700%);
+    background: rgba(0,0,0, 0.2);
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(2px);
+    animation: shadow 1.5s linear infinite;
+}
+
+@keyframes shadow {
+    
+    0% {
+        transform: translate(-50%, 700%) scale(1);
+    }
+    
+    50% {
+        transform: translate(-50%, 700%) scale(.5);
+    }
+    
+    100% {
+        transform: translate(-50%, 700%) scale(1);
+    }
+    
+}
+
+

@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.bgCardrive {
+    position: relative;
+    background: #00fdff url(citystreetlandscape.jpg) repeat-x 0 0;
+    height: 315px;
+    animation: city 15s linear normal forwards infinite;
+    /*animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
+}
+
+.car {
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+}
+
+@keyframes city {
+    
+    from {
+        background-position: 100% 0;
+    }
+    
+    to {
+        background-position: 0 100%;
+    }
+     
+}
+
+
